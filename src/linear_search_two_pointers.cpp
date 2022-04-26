@@ -8,7 +8,13 @@ namespace assignment {
     // 1. Задайте две переменные: (1) индекс первого элемента и (2) индекс последнего элемента.
     // 2. Проверяйте наличие целевого элемента по индексам.
     // 3. Обновляйте индексы пока левый не станет больше правого.
-
+    if(arr.size() == 0) return std::nullopt;
+    int l = 0, r = arr.size() - 1;
+    while(l <= r) {
+      if(arr[l] == search_elem) return l;
+      if(arr[r] == search_elem) return r;
+      l++, r--;
+    }
     return std::nullopt;
   }
 
